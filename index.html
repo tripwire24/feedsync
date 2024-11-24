@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFF5F5">
+    <meta name="description" content="Track your baby's feeding sessions with this simple, beautiful app">
+    <title>Baby Feeding</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Baby Feeding">
+</head>
+<body>
+    <div class="container">
+        <button class="history-button" aria-label="Show feeding history">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+        </button>
+
+        <div class="timer-circle">
+            <div class="timer">00:00</div>
+        </div>
+
+        <button class="action-button" id="startButton" aria-label="Start feeding">
+            <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </button>
+
+        <div class="milk-input" id="milkInput">
+            <div class="amount-picker">
+                <button class="amount-adjust" data-adjust="-10">-10</button>
+                <div>
+                    <span class="amount-display">0</span>
+                    <span class="amount-unit">ml</span>
+                </div>
+                <button class="amount-adjust" data-adjust="+10">+10</button>
+            </div>
+            <button class="save-button">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => console.log('ServiceWorker registration successful'))
+                .catch(err => console.error('ServiceWorker registration failed:', err));
+        }
+    </script>
+</body>
+</html>

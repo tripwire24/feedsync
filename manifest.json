@@ -1,0 +1,39 @@
+{
+  "name": "Baby Feeding Tracker",
+  "short_name": "Baby Feed",
+  "description": "Track your baby's feeding sessions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF5F5",
+  "theme_color": "#FFF5F5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/feeding.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Homescreen of Baby Feeding Tracker"
+    }
+  ]
+}
